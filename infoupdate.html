@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='jquery.mobile-1.4.5.min.css'>
+    <link rel='stylesheet' href='styles.css' type='text/css'>
+    <script src='javascript.js'></script>
+    <script src='jquery-2.2.4.min.js'></script>
+    <script src='jquery.mobile-1.4.5.min.js'></script>
+    <title>Document</title>
+    <script>
+        function validate(form)
+     {
+         fail = validateId(form.id.value)
+         fail += validateDesignatedbranch(form.designatedbranch.value)
+         fail += validateDepartment(form.department.value)
+         fail += validateDriver(form.driver.value)
+         fail += validateRepairs(form.repairs.value)
+ 
+         if (fail =="") return true
+         else { alert(fail); return false}
+     }
+
+     function validateId(field)
+     {
+         return (field =="") ? "No ID was entered.\n" :""
+     }
+     function validateDesignatedbranch(field)
+     {
+         return (field =="") ? "No Designated branch was entered.\n" :""
+     }
+     function validateDepartment(field)
+     {
+         return (field =="") ? "No Department was entered.\n" :""
+     }
+     function validateDriver(field)
+     {
+         return (field =="") ? "No Driver was entered.\n" :""
+     }
+     function validateRepairs(field)
+     {
+         return (field =="") ? "No Repairs was entered.\n" :""
+     }
+
+ </script>
+</head>
+<body>
+    <div  data-role="page">
+        <div  data-role="header">
+    <h1>Update A Vehicle info.</h1>
+        </div>
+        <div  data-role="content">
+    <form method="POST" action="updateinfo.php" onsubmit="return validate(this)">
+        <table>
+        <tr><td>ID                      :</td> <td> <input type="text" name="id"> <br/></td></tr>
+     <tr><td> Designated Branch         :</td> <td> <input type="text" name="designatedbranch"> <br/></td></tr>
+     <tr><td>  Department                :</td> <td> <input type="text" name="department"> <br/></td></tr>
+     <tr><td> Driver                    :</td> <td> <input type="text" name="driver"> <br/></td></tr>
+     <tr><td> Repairs                    :</td> <td> <input type="text" name="repairs"> <br/></td></tr>
+    </div>
+    <div  data-role="footer">
+     <tr><td><input type="submit" value="SUBMIT"></td></tr>
+        <tr><td><a href="dashboardhom.html">Return Back</a><br></td></tr>
+    </div>
+        </form>
+    </table>
+
+</div>
+</body>
+</html>
+

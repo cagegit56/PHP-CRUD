@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='jquery.mobile-1.4.5.min.css'>
+    <link rel='stylesheet' href='styles.css' type='text/css'>
+    <script src='javascript.js'></script>
+    <script src='jquery-2.2.4.min.js'></script>
+    <script src='jquery.mobile-1.4.5.min.js'></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+
+    </style>
+    <title>Document</title>
+     <script>
+           function validate(form)
+        {
+            fail = validateUsername(form.username.value)
+            fail += validatePassword(form.password.value)
+    
+            if (fail =="") return true
+            else { alert(fail); return false}
+        }
+
+        function validateUsername(field)
+        {
+            return (field =="") ? "No Username was entered.\n" :""
+        }
+        function validatePassword(field)
+        {
+            return (field =="") ? "No Password was entered.\n" :""
+        }
+    </script>
+</head>
+<body>
+    <div  data-role="page">
+<form method="POST"action="authenticate.php" data-ajax="false"  onsubmit="return validate(this)">
+    <div data-role="header">
+        <h1>ONLINE FLEET MANAGEMENT</h1>
+        </div>
+    <div data-role="content">
+        <h2>Login Page</h2>
+Username:<input id="username" type="text" data-inline='true'  placeholder='username' maxlength='16' name="username"> <br/>
+Password: <input id="password" type="text" data-transition='slide' placeholder='password' maxlength='16' name="password"> <br/></div>
+<div data-role="footer">
+<input data-role ='button' data-ajax="false"  data-inline='true' data-transition='slide' data-icon='home' type="submit" value="login">
+</div>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='jquery.mobile-1.4.5.min.css'>
+    <link rel='stylesheet' href='styles.css' type='text/css'>
+    <link rel='stylesheet' href='styles.css' type='text/css'>
+    <script src='javascript.js'></script>
+    <script src='jquery-2.2.4.min.js'></script>
+    <script src='jquery.mobile-1.4.5.min.js'></script>
+    <title>Home</title>
+</head>
+<body>
+
+<div data-role="page">
+  <div data-role="header">
+  <h1>Welcome to our Online Fleet Management</h1>
+</div>
+<div data-role="content">
+  <a data-role ='button' data-inline='true' data-icon='plus'data-ajax="false"  href="registration.php">
+    Register A Vehicle
+    <!-- <button class="btn btn-primary btn-lg">Press to register a vehicle</button> -->
+</a>
+<br>
+<a data-role ='button' data-inline='true' data-icon='check' data-ajax="false"  href="viewinfo.php">
+View Vehicle Info  <!-- <button class="btn btn-primary btn-lg">View vehicle info</button> -->
+</a>
+<br>
+<a data-role ='button' data-inline='true'  data-icon='plus'  data-ajax="false" href="infoupdate.html">
+  Update Vehicle Info
+  <!-- <button class="btn btn-primary btn-lg">Update vehicle info</button> -->
+</a>
+<br>
+<a data-role ='button' data-inline='true'  data-icon='check'  data-ajax="false" href="writtenoffquery.php">
+  Query All Write-Off Vehicle
+  <!-- <button class="btn btn-primary btn-lg">Update vehicle info</button> -->
+</a>
+<br>
+<a data-role ='button' data-inline='true'  data-icon='check'  data-ajax="false" href="querydiesel.php">
+  Query All Diesel Vehicle
+  <!-- <button class="btn btn-primary btn-lg">Update vehicle info</button> -->
+</a>
+</div>
+<br>
+<div data-role="footer">
+<a href="index.html">Return To Login</a>
+<br><br>
+<a href="logout.php">Logout To Google</a>
+</div>
+</div>
+</body>
+</html>
